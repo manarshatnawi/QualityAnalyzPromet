@@ -64,7 +64,7 @@ if 'language' not in st.session_state:
 
 col1, col2 = st.columns([6, 1])
 with col2:
-    lang = st.selectbox("", ["العربية", "English"], 
+    lang = st.selectbox("Language / اللغة", ["العربية", "English"], ...), 
                        index=["العربية", "English"].index(st.session_state.language),
                        key="lang_selector")
     st.session_state.language = lang
