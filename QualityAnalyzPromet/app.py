@@ -430,17 +430,16 @@ def radar_chart(rep, title=""):
     return fig
 
 def progress_chart(history):
-    iters  = [r["iteration"] for r in history]
-    scores = [r["score"] for r in history]
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=iters, y=scores, mode='lines+markers+text',
-        line=dict(color='#03dac6',width=3),
-        marker=dict(size=11,color='#bb86fc',line=dict(color='#fff',width=2)),
-        text=[f"{s:.0f}" for s in scores], textposition="top center",
-        textfont=dict(color="#fff",size=11),
-    ))
-    fig.add_hline(y=target, line_dash="dash", line_color="#ffa726",
+    iters = [r["iteration"] for r in history]
+    scores = [r["score"] for r in history]
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=iters, y=scores, mode='lines+markers+text',
+        line=dict(color='#03dac6', width=3),
+        marker=dict(size=11, color='#bb86fc', line=dict(color='#fff', width=2)),
+        text=[f"{s:.0f}" for s in scores], textposition="top center",
+        textfont=dict(color="#fff", size=11),
+    ))    fig.add_hline(y=target, line_dash="dash", line_color="#ffa726",
                   annotation_text=f"Target ({target})", annotation_position="top right",
                   annotation_font_color="#ffa726")
     fig.update_layout(
