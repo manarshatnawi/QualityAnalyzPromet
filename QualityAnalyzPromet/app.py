@@ -359,7 +359,7 @@ print(z)
 # ─────────────────────────────────────────────────────────────────────
 c1, c2 = st.columns([4,1])
 with c1:
-    st.markdown(f'<div class="sec-title">{texts["input_title"]}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="sec-title">{texts["input_title"]}</div>', unsafe_allow_html=True)
 with c2:
     st.write("")
     if st.button(texts["example_button"], use_container_width=True):
