@@ -325,8 +325,7 @@ with st.sidebar:
     min_imp = st.slider(f"{'أدنى تحسن مقبول' if st.session_state.language == 'العربية' else 'Min Improvement'}", 1.0, 10.0, 3.0, 0.5)
     
     st.divider()
-    analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.session_state.language == 'العربية' else 'Analyze Only (No Refinement)'}", value=False) 
-
+analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.session_state.language == 'العربية' else 'Analyze Only (No Refinement)'}", value=False)
 # قراءة مفتاح Groq من secrets.toml (مخفي عن المستخدم)
 try:
     groq_key = st.secrets["GROQ_API_KEY"]
