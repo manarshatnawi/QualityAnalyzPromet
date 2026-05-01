@@ -22,42 +22,41 @@ from core import (
 # Language Support
 # ─────────────────────────────────────────────────────────────────────
 LANGUAGES = {
-    "العربية": {
-        "title": "محلل جودة الكود الذكي",
-        "subtitle": "نظام تحليل وإصلاح الكود بشكل تكراري ذكي",
-        "input_title": "📝 أدخل الكود",
-        "example_button": "📋 مثال",
-        "analyze_button": "🔍 تحليل",
-        "refine_button": "✨ إصلاح",
-        "results_title": "📊 النتائج",
-        "quality_score": "درجة الجودة",
-        "problems_found": "المشاكل المكتشفة",
-        "improved_code": "الكود المحسن",
-        "iterations": "التكرارات",
-        "grade": "التقدير",
-        "loading": "جاري التحليل...",
-        "success": "تم التحليل بنجاح!",
-        "error": "حدث خطأ أثناء التحليل"
-    },
-    "English": {
-        "title": "Smart Code Quality Analyzer",
-        "subtitle": "Intelligent iterative code analysis and refinement system",
-        "input_title": "📝 Enter Code",
-        "example_button": "📋 Example",
-        "analyze_button": "🔍 Analyze",
-        "refine_button": "✨ Refine",
-        "results_title": "📊 Results",
-        "quality_score": "Quality Score",
-        "problems_found": "Problems Found",
-        "improved_code": "Improved Code",
-        "iterations": "Iterations",
-        "grade": "Grade",
-        "loading": "Analyzing...",
-        "success": "Analysis completed successfully!",
-        "error": "Error during analysis"
-    }
+    "العربية": {
+        "title": "محلل جودة الكود الذكي",
+        "subtitle": "نظام تحليل وإصلاح الكود بشكل تكراري ذكي",
+        "input_title": "📝 أدخل الكود",
+        "example_button": "📋 مثال",
+        "analyze_button": "🔍 تحليل",
+        "refine_button": "✨ إصلاح",
+        "results_title": "📊 النتائج",
+        "quality_score": "درجة الجودة",
+        "problems_found": "المشاكل المكتشفة",
+        "improved_code": "الكود المحسن",
+        "iterations": "التكرارات",
+        "grade": "التقدير",
+        "loading": "جاري التحليل...",
+        "success": "تم التحليل بنجاح!",
+        "error": "حدث خطأ أثناء التحليل"
+    },
+    "English": {
+        "title": "Smart Code Quality Analyzer",
+        "subtitle": "Intelligent iterative code analysis and refinement system",
+        "input_title": "📝 Enter Code",
+        "example_button": "📋 Example",
+        "analyze_button": "🔍 Analyze",
+        "refine_button": "✨ Refine",
+        "results_title": "📊 Results",
+        "quality_score": "Quality Score",
+        "problems_found": "Problems Found",
+        "improved_code": "Improved Code",
+        "iterations": "Iterations",
+        "grade": "Grade",
+        "loading": "Analyzing...",
+        "success": "Analysis completed successfully!",
+        "error": "Error during analysis"
+    }
 }
-
 # Language selector
 if 'language' not in st.session_state:
     st.session_state.language = "العربية"
