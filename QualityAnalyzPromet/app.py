@@ -330,16 +330,10 @@ analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.se
 try:
     groq_key = st.secrets["GROQ_API_KEY"]
 except:
-    groq_key = os.environ.get("GROQ_API_KEY", "")
-    if not groq_key:
-        warning_msg = """
+    groq_key = os.environ.get("GROQ_API_KEY", "")
+    if not groq_key:
+        warning_msg = """
 ⚠️ **مفتاح Groq API غير موجود**
-
-يمكنك استخدام وضع **تحليل فقط** بدون المفتاح.
-أما وضع الإصلاح التكراري فيحتاج إلى `GROQ_API_KEY` داخل `.streamlit/secrets.toml`.
-        """ if st.session_state.language == "العربية" else """
-⚠️ **Groq API Key Not Found**
-
 You can use **Analyze Only** mode without the key.
 Refinement mode requires `GROQ_API_KEY` in `.streamlit/secrets.toml`.
         """
