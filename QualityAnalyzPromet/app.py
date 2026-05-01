@@ -315,16 +315,17 @@ st.markdown(f"""
 # Sidebar
 # ─────────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown(f"### ⚙️ {'الإعدادات' if st.session_state.language == 'العربية' else 'Settings'}")
-    st.divider()
-    st.markdown(f"**🔁 {'إعدادات الحلقة التكرارية' if st.session_state.language == 'العربية' else 'Iteration Settings'}**")
-    max_iter = st.slider(f"{'أقصى عدد تكرارات' if st.session_state.language == 'العربية' else 'Max Iterations'}", 1, 8, 4)
-    target   = st.slider(f"{'درجة الهدف' if st.session_state.language == 'العربية' else 'Target Score'}", 50, 100, 85)
-    patience = st.slider(f"{'الصبر' if st.session_state.language == 'العربية' else 'Patience'}", 1, 4, 2)
-    min_imp  = st.slider(f"{'أدنى تحسن مقبول' if st.session_state.language == 'العربية' else 'Min Improvement'}", 1.0, 10.0, 3.0, .5)
-    st.divider()
-    analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.session_state.language == 'العربية' else 'Analyze Only (No Refinement)'}", value=False)
-    
+    st.markdown(f"### ⚙️ {'الإعدادات' if st.session_state.language == 'العربية' else 'Settings'}")
+    st.divider()
+    st.markdown(f"**🔁 {'إعدادات الحلقة التكرارية' if st.session_state.language == 'العربية' else 'Iteration Settings'}**")
+    
+    max_iter = st.slider(f"{'أقصى عدد تكرارات' if st.session_state.language == 'العربية' else 'Max Iterations'}", 1, 8, 4)
+    target = st.slider(f"{'درجة الهدف' if st.session_state.language == 'العربية' else 'Target Score'}", 50, 100, 85)
+    patience = st.slider(f"{'الصبر' if st.session_state.language == 'العربية' else 'Patience'}", 1, 4, 2)
+    min_imp = st.slider(f"{'أدنى تحسن مقبول' if st.session_state.language == 'العربية' else 'Min Improvement'}", 1.0, 10.0, 3.0, 0.5)
+    
+    st.divider()
+    analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.session_state.language == 'العربية' else 'Analyze Only (No Refinement)'}", value=False) 
 
 # قراءة مفتاح Groq من secrets.toml (مخفي عن المستخدم)
 try:
