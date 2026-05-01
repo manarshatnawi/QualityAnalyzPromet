@@ -14,8 +14,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from core import (
-    ASTAnalyzer, ProblemClassifier, QualityScorer,
-    IterativeRefiner, FeatureVector, QualityReport, IterationRecord
+    ASTAnalyzer, ProblemClassifier, QualityScorer,
+    IterativeRefiner, FeatureVector, QualityReport, IterationRecord
 )
 
 # ─────────────────────────────────────────────────────────────────────
