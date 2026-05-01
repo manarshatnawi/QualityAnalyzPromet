@@ -336,9 +336,8 @@ except:
 ⚠️ **مفتاح Groq API غير موجود**
 You can use **Analyze Only** mode without the key.
 Refinement mode requires `GROQ_API_KEY` in `.streamlit/secrets.toml`.
-        """
-        st.warning(warning_msg)
-
+        """
+        st.warning(warning_msg)
 # ─────────────────────────────────────────────────────────────────────
 # Example Code (Very Bad Code)
 # ─────────────────────────────────────────────────────────────────────
