@@ -328,7 +328,7 @@ with st.sidebar:
 analyze_only = st.checkbox(f"{'تحليل فقط (بدون إصلاح)' if st.session_state.language == 'العربية' else 'Analyze Only (No Refinement)'}", value=False)
 # قراءة مفتاح Groq من secrets.toml (مخفي عن المستخدم)
 try:
-    groq_key = st.secrets["GROQ_API_KEY"]
+    groq_key = st.secrets["GROQ_API_KEY"]
 except:
     groq_key = os.environ.get("GROQ_API_KEY", "")
     if not groq_key:
