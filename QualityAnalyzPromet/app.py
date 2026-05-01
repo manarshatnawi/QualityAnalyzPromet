@@ -77,13 +77,16 @@ texts = LANGUAGES[st.session_state.language]
 # ─────────────────────────────────────────────────────────────────────
 # Page config
 # ─────────────────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title=texts["title"],
-    page_icon="🔬",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+# تأكد أولاً من الحصول على النصوص بناءً على اللغة المختارة
+texts = LANGUAGES[st.session_state.language]
 
+# إعدادات الصفحة - يجب أن تكون أول أمر Streamlit في السكربت
+st.set_page_config(
+    page_title=texts["title"],
+    page_icon="🔬",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 # ─────────────────────────────────────────────────────────────────────
 # Enhanced CSS with Modern Design
 # ─────────────────────────────────────────────────────────────────────
