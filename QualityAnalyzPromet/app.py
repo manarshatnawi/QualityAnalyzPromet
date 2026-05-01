@@ -62,11 +62,16 @@ if 'language' not in st.session_state:
     st.session_state.language = "العربية"
 col1, col2 = st.columns([6, 1])
 with col2:
-    lang = st.selectbox("Language / اللغة", ["العربية", "English"]), 
-                       index=["العربية", "English"].index(st.session_state.language),
-                       key="lang_selector")
-    st.session_state.language = lang
-
+    lang = st.selectbox(
+        "Language / اللغة", 
+        ["العربية", "English"],
+        index=["العربية", "English"].index(st.session_state.language),
+        key="lang_selector"
+    )
+    # تحديث اللغة في الجلسة بناءً على اختيار المستخدم
+    if st.session_state.language != lang:
+        st.session_state.language = lang
+        st.rerun()
 texts = LANGUAGES[st.session_state.language]
 
 # ─────────────────────────────────────────────────────────────────────
